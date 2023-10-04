@@ -18,7 +18,7 @@ app.use('/', Router)
 const URL = process.env.DB_URL;
 Connection(URL);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server is running successfully on port ${PORT}`));
 
 defaultData();
